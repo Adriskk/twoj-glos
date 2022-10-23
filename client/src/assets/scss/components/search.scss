@@ -1,0 +1,72 @@
+// * Stylesheet for Search component.
+
+.search {
+  $height: 50px;
+  $padding: 0.3rem;
+  height: $height;
+  min-width: 280px;
+  max-width: 400px;
+  width: 100%;
+
+  border-radius: 30px;
+  border: solid 2px var(--primary-color);
+  padding: $padding;
+  position: relative;
+
+  &[data-opened="true"] {
+    .trigger-btn {
+      width: calc($height - (3 * $padding));
+    }
+
+    .search-input-wrapper {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .trigger-btn {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: inherit;
+    transition: 300ms all ease;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .icon {
+      fill: #fff;
+    }
+  }
+
+  .search-input-wrapper {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms all ease;
+
+    .search-input {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      border: none;
+      outline: none;
+      background: none;
+
+      color: var(--secondary-color);
+      font-size: 1em;
+      font-weight: $regular;
+      padding-left: calc($height + $padding);
+      padding-right: $padding * 2;
+    }
+  }
+}

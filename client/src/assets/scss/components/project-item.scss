@@ -1,0 +1,126 @@
+// * Stylesheet for ProjectItem component.
+
+.project-item {
+  width: 100%;
+
+  .project-tile-position {
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    span.project-pos {
+      color: #fff;
+      font-size: 0.9em;
+    }
+  }
+
+  .project-item-tile {
+    min-height: 200px;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 0 10px 10px 10px;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+
+    @include md {
+      grid-template-columns: auto auto;
+    }
+
+    .project-item-map {
+      display: none;
+      width: 100%;
+      height: 100%;
+
+      @include md {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .project-item-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .project-item-text-content {
+        gap: 0.5rem;
+        width: 100%;
+        height: 100%;
+
+        .project-item-title {
+          font-weight: $medium;
+        }
+
+        .project-item-description {
+          font-weight: $light;
+          font-size: 0.9em;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 250px;
+        }
+
+        .project-item-budget {
+          font-size: 0.95em;
+
+          .color {
+            color: var(--primary-color);
+          }
+        }
+
+        .project-item-localization {
+          font-size: 0.95em;
+          margin-top: 1rem;
+        }
+      }
+
+      .project-item-bottom-bar {
+        gap: 1rem;
+        margin-top: 2rem;
+        width: 100%;
+
+        span.project-item-votes-wrapper {
+          font-size: 0.8em;
+
+          span.votes {
+            font-size: 1.6em;
+            color: var(--primary-color);
+            font-weight: $medium;
+          }
+        }
+
+        .project-item-details-wrapper {
+          $size: 48px;
+          height: $size;
+          width: $size;
+          background-color: var(--primary-color);
+          border-radius: 50%;
+          transition: 200ms all ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          .icon {
+            path {
+              width: 100%;
+              height: 100%;
+              stroke: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+// * Stylesheet for ProjectsLanding view.
+
+section#projects-landing {
+  gap: 4rem;
+
+  .section-intro {
+    margin-top: 4rem;
+    gap: 1rem;
+
+    .intro-header {
+      font-size: 1.1em;
+      font-weight: $light;
+      text-align: center;
+    }
+
+    .intro-city {
+      font-size: 5ch;
+      font-weight: $medium;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      color: transparent;
+      -webkit-text-stroke: var(--primary-color) 2px;
+    }
+  }
+
+  .search-wrapper {
+    width: auto;
+    gap: 0.5rem;
+
+    .search-small {
+      font-weight: $light;
+    }
+
+    @include md {
+      width: 100%;
+    }
+  }
+
+  .projects-list-wrapper {
+    width: 100%;
+    gap: 4rem;
+
+    .projects-list {
+      width: 100%;
+      gap: 1.5rem;
+
+      .projects-list-header {
+        font-size: 1.4em;
+        font-weight: $regular;
+      }
+
+      .projects {
+        width: 100%;
+        gap: 2rem;
+      }
+    }
+  }
+}

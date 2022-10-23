@@ -1,0 +1,9 @@
+// * Stylesheet for EmptyResults component.
+
+.empty-results {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: $regular;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+// * Stylesheet for Popup component.
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: var(--popup-z);
+}
+
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  z-index: var(--popup-z);
+
+  padding: 1rem;
+  background-color: var(--background-color);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: solid 2px crimson;
+  border-radius: 10px;
+  max-width: 350px;
+  min-width: 300px;
+  gap: 1rem;
+
+  .popup-title {
+    color: crimson;
+    font-weight: $medium;
+    font-size: 1em;
+  }
+
+  .popup-message {
+    font-weight: $light;
+    color: var(--secondary-color);
+    font-size: 0.9em;
+  }
+}

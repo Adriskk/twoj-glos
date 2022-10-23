@@ -1,0 +1,10 @@
+// * Stylesheet for DefaultHeader component.
+
+.default-header {
+  font-size: 2em;
+  font-weight: $medium;
+
+  @include md {
+    font-size: 2.4em;
+  }
+}

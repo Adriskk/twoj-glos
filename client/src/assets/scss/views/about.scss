@@ -1,0 +1,47 @@
+// * Stylesheet for About view.
+
+section#about {
+  .content {
+    width: 100%;
+    margin-top: 5rem;
+
+    .header-content {
+      gap: 2rem;
+
+      span.header {
+        max-width: 450px;
+        font-size: 1.5em;
+        font-weight: $medium;
+
+        &.small {
+          font-size: 1.2em;
+        }
+
+        span {
+          color: var(--primary-color);
+        }
+      }
+
+      p.description {
+        font-size: 1em;
+        max-width: 550px;
+        text-align: justify;
+
+        span,
+        a {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .supported-cities {
+      gap: 1rem;
+      max-width: 550px;
+
+      .cities-wrapper {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

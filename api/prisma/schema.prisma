@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model projects {
+  id          Int     @id @default(autoincrement())
+  title       String? @db.VarChar(85)
+  author      String?
+  cost        Decimal?
+  votes       Decimal?
+  project_size String?
+  description String? @db.VarChar(4000)
+  localization    String?
+  isApproved  Boolean?
+  city        String?
+  lat         Decimal?
+  lng         Decimal?
+  additional_information String? @db.VarChar(250)
+}
+
+model users {
+  id       Int      @id @default(autoincrement())
+  email    String? @db.VarChar(320)
+  password String?
+  city     String?
+  pesel    String?
+  name     String?
+  surname  String?
+  phone    String?
+  isGov    Boolean?
+  theme    String?
+}
+
+model votedProjects {
+    id Int @id @default(autoincrement())
+    userId Int
+    projectId Int
+}
+
+model userProjects {
+    id Int @id @default(autoincrement())
+    userId Int
+    projectId Int
+}
+

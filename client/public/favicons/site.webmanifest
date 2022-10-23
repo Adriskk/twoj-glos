@@ -1,0 +1,19 @@
+{
+    "name": "Tw\u00f3j g\u0142os",
+    "short_name": "Tw\u00f3j g\u0142os",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#4cb963",
+    "background_color": "#4cb963",
+    "display": "standalone"
+}

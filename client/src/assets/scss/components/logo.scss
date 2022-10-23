@@ -1,0 +1,17 @@
+// * Stylesheet for Logo component.
+
+.logo {
+  font-weight: $medium;
+  font-size: 1.2em;
+  gap: 0.5rem;
+
+  span span {
+    color: var(--primary-color);
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+  }
+}

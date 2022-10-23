@@ -1,0 +1,42 @@
+// * Stylesheet for AddProject view.
+
+section#add-project {
+  margin-top: 4rem;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 5rem;
+    place-items: center;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      grid-template-rows: 1fr;
+      place-items: flex-start center;
+      padding-top: 3rem;
+    }
+
+    .text-content {
+      gap: 2rem;
+
+      p.description {
+        font-size: 1em;
+        font-weight: $light;
+        color: var(--secondary-color);
+        line-height: 1.4em;
+      }
+    }
+
+    form {
+      width: 100%;
+      max-width: 400px;
+      gap: 2rem;
+
+      button[type="submit"] {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

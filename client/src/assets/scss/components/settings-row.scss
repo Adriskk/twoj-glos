@@ -1,0 +1,18 @@
+// * Stylesheet for SettingsRow component.
+
+.settings-row {
+  gap: 0.25rem;
+
+  .settings-row-label {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: $light;
+  }
+
+  .settings-row-value {
+    font-size: 1em;
+    color: var(--secondary-color);
+    font-weight: $medium;
+  }
+}

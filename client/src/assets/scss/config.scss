@@ -1,0 +1,71 @@
+// * Configuration file for scss stylesheets.
+
+:root {
+  --background-color: #fff;
+  --primary-color: #4cb963;
+  --primary-color-alpha-70: rgba(76, 189, 99, 0.7);
+  --primary-color-alpha-60: rgba(76, 189, 99, 0.6);
+  --primary-color-alpha-50: rgba(76, 189, 99, 0.5);
+  --primary-color-alpha-40: rgba(76, 189, 99, 0.4);
+  --primary-color-alpha-30: rgba(76, 189, 99, 0.3);
+  --primary-color-alpha-20: rgba(76, 189, 99, 0.2);
+  --primary-color-alpha-10: rgba(76, 189, 99, 0.1);
+  --secondary-color: #999999;
+  --font-color: #000;
+
+  --section-padding: 2rem;
+  --footer-background: #080708;
+  --menu-z: 1000;
+  --popup-z: 1010;
+}
+
+// * Font weights.
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+
+// * View.
+// Small tablets and large smartphones (landscape view).
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view).
+$screen-md-min: 768px;
+
+// Tablets and small desktops.
+$screen-lg-min: 992px;
+
+// Large tablets and desktops.
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}

@@ -1,0 +1,78 @@
+// * Stylesheet for Modal component.
+
+.modal {
+  min-width: 350px;
+  width: 30vw;
+  height: 300px;
+  border-radius: 10px;
+  background-color: var(--background-color);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 1rem;
+  z-index: var(--popup-z);
+
+  .modal-top-bar {
+    width: 100%;
+
+    span.title {
+      font-size: 1.1em;
+      font-weight: $medium;
+    }
+  }
+
+  .modal-body {
+    height: 100%;
+
+    p.message {
+      font-weight: $light;
+      color: var(--secondary-color);
+    }
+
+    .modal-bottom-bar {
+      width: 100%;
+      gap: 1rem;
+
+      .modal-button-wrapper.success {
+        width: 100%;
+
+        .button {
+          border-color: var(--primary-color) !important;
+          color: var(--primary-color) !important;
+
+          &:hover {
+            background-color: var(--primary-color) !important;
+            color: #fff !important;
+          }
+        }
+      }
+
+      .button {
+        min-width: initial;
+
+        &:first-of-type {
+          border-color: var(--secondary-color);
+          color: var(--secondary-color);
+
+          &:hover {
+            background-color: var(--secondary-color);
+            color: #fff;
+          }
+        }
+
+        &:last-of-type {
+          border-color: crimson;
+          color: crimson;
+
+          &:hover {
+            background-color: crimson;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

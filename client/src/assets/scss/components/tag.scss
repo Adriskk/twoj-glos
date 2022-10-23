@@ -1,0 +1,11 @@
+// * Stylesheet for Tag component.
+
+.tag {
+  border: solid 2px var(--primary-color);
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: $regular;
+  padding: 0.25rem 0.5rem;
+  color: var(--primary-color);
+  word-break: keep-all;
+}

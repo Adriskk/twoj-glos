@@ -1,0 +1,298 @@
+// * Stylesheet for Landing view.
+
+section#hero {
+  margin-top: 4rem;
+  gap: 4rem;
+
+  @include md {
+    margin-top: 6rem;
+  }
+
+  @include lg {
+    gap: 6rem;
+  }
+
+  span.hero-header {
+    font-size: 3em;
+    font-weight: $bold;
+    width: 100%;
+
+    @include md {
+      text-align: center;
+    }
+
+    @include lg {
+      font-size: 3.8em;
+    }
+
+    span:not(.light) {
+      color: var(--primary-color);
+    }
+
+    span.light {
+      font-weight: $light;
+    }
+  }
+
+  .hero-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      gap: 3rem;
+    }
+
+    @include lg {
+      gap: 7rem;
+      padding-inline: 4rem;
+    }
+
+    .content-left {
+      gap: 2rem;
+
+      .hero-description {
+        font-size: 1em;
+        max-width: 350px;
+
+        @include md {
+          font-size: 1.2em;
+          max-width: initial;
+        }
+
+        span {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .content-right {
+      order: -1;
+      gap: 2rem;
+
+      @include sm {
+        flex-direction: row;
+      }
+
+      @include md {
+        order: 1;
+        flex-direction: column;
+      }
+
+      .content-row {
+        max-width: 220px;
+
+        @include sm {
+          max-width: initial;
+        }
+
+        @include md {
+          max-width: 220px;
+        }
+
+        span.row-header {
+          font-size: 0.9em;
+          font-weight: $light;
+          color: var(--primary-color);
+          text-transform: uppercase;
+        }
+
+        span.row-value {
+          font-weight: $bold;
+          font-size: 2.5em;
+
+          @include lg {
+            font-size: 3.3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+section#showcase-video {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .header {
+    font-size: 2em;
+    font-weight: $medium;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  @include lg {
+    min-height: 100vh;
+  }
+
+  .video {
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    @include lg {
+      height: 100%;
+    }
+  }
+}
+
+section#jak-to-dziala,
+section#suggest-project-tutorial {
+  gap: 4rem;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      gap: 3rem;
+    }
+
+    .illustration {
+      width: 100%;
+      height: auto;
+      padding: 2rem 0;
+      max-width: 400px;
+      max-height: 350px;
+
+      @include sm {
+        padding: 0;
+      }
+
+      &.big {
+        padding: 0;
+      }
+    }
+  }
+}
+
+section#suggest-project-tutorial {
+  @include lg {
+    .illustration {
+      order: -1;
+    }
+  }
+}
+
+section#see-projects {
+  .content {
+    gap: 2rem;
+
+    .content-input-wrapper {
+      gap: 1rem;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+section#register-now {
+  min-height: 70vh;
+  background-color: var(--primary-color);
+  gap: 5rem;
+
+  * {
+    color: #fff;
+  }
+
+  @include md {
+    justify-content: flex-start;
+  }
+
+  .content {
+    gap: 3rem;
+
+    .header {
+      font-size: 2em;
+      font-weight: $semi-bold;
+
+      @include sm {
+        width: 70%;
+      }
+
+      @include md {
+        font-size: 2.5em;
+      }
+    }
+
+    p.description {
+      font-weight: $light;
+      font-size: 1em;
+
+      @include sm {
+        width: 70%;
+      }
+    }
+  }
+
+  .button-wrapper {
+    width: 100%;
+    margin-top: 5rem;
+
+    @include md {
+      margin-top: 10rem;
+    }
+
+    .button {
+      border-color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.header-content {
+  gap: 1rem;
+
+  &.different {
+    align-items: center;
+
+    span.header {
+      text-align: center;
+    }
+
+    p.description {
+      color: var(--secondary-color);
+      text-align: center;
+      font-weight: $light;
+      max-width: 350px;
+    }
+  }
+
+  span.header {
+    max-width: 350px;
+    font-size: 1.5em;
+    font-weight: $medium;
+  }
+
+  p.description {
+    font-size: 1em;
+    max-width: 450px;
+  }
+}

@@ -1,0 +1,30 @@
+// * Stylesheet for NoMatch view.
+
+section#no-match {
+  .content {
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+
+    .illustration {
+      width: 70%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    .header {
+      font-size: 1.8em;
+      font-weight: $medium;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    .description {
+      font-size: 0.9em;
+      color: var(--secondary-color);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// * Stylesheet for Button component.
+
+.button {
+  border: solid 2px var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  color: var(--primary-color);
+  font-weight: $regular;
+  font-size: 1em;
+  transition: 250ms all ease;
+  background: none;
+  cursor: pointer;
+
+  &[type="submit"],
+  &[type="button"] {
+    width: 100%;
+    min-width: 280px;
+    max-width: 400px;
+  }
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+}

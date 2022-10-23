@@ -1,0 +1,43 @@
+// * Stylesheet for StepsVisualizer component.
+
+.steps-visualizer {
+  gap: 0.5rem;
+
+  .step {
+    $size: 16px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: solid 1px var(--primary-color);
+    transition: 200ms all ease;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--primary-color);
+      width: 0px;
+      height: 0px;
+      transition: 200ms all ease 100ms;
+      border-radius: inherit;
+    }
+
+    &.active {
+      width: 20px;
+      height: 20px;
+      transform: scale(1.2);
+
+      &::before {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+}

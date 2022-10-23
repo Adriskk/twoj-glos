@@ -1,0 +1,51 @@
+// * Stylesheet for ViewSlider component.
+
+.view-slider {
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+
+  .view-slider-views {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .view-slider-view {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 1rem;
+
+      transition: 300ms all ease;
+      visibility: hidden;
+      opacity: 0;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &[data-active="true"] {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      p {
+        font-weight: $light;
+        width: 100%;
+
+        @include sm {
+          width: 70%;
+        }
+
+        span {
+          font-weight: $regular;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

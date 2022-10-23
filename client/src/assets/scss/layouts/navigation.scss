@@ -1,0 +1,128 @@
+// * Stylesheet for Navigation layout.
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  height: auto;
+  background-color: var(--background-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 500ms all ease;
+  z-index: var(--menu-z);
+  top: 0;
+
+  @include md {
+    min-height: 80px;
+  }
+
+  @include md {
+    padding: 1rem 2rem;
+  }
+
+  @include lg {
+    padding: 1rem 3rem;
+  }
+
+  &[data-opened="true"] {
+    .content {
+      transform: translateX(0) !important;
+    }
+  }
+
+  .nav-topbar {
+    width: 100%;
+    position: relative;
+    z-index: var(--menu-z);
+
+    .logo-wrapper {
+      position: relative;
+      z-index: calc(var(--menu-z) + 1);
+    }
+
+    @include md {
+      .hamburger {
+        display: none;
+      }
+    }
+
+    .content {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      left: -1rem;
+      top: -1rem;
+      transform: translateX(-100%);
+      transition: 300ms all ease;
+      z-index: calc(var(--menu-z) - 1);
+
+      &.intro-content {
+        background-color: var(--primary-color);
+
+        @include md {
+          display: none;
+        }
+      }
+
+      &.hidden-content {
+        background-color: var(--background-color);
+        transition-delay: 300ms;
+        padding: 3rem 1rem;
+
+        @include md {
+          position: relative;
+          left: initial;
+          top: initial;
+          transform: translateX(0);
+          padding: 0;
+          width: auto;
+          height: 100%;
+
+          transition-delay: 0ms;
+          flex-direction: row;
+        }
+
+        .nav-links {
+          height: auto;
+          width: 100%;
+          gap: 1.5rem;
+          padding: 0 1rem;
+
+          @include md {
+            flex-direction: row;
+            gap: 1rem;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+          }
+
+          .links {
+            gap: inherit;
+
+            @include md {
+              flex-direction: row;
+              margin-right: 4rem;
+            }
+          }
+
+          .nav-link {
+            font-size: 2em;
+            font-weight: $regular;
+
+            @include md {
+              font-size: 1.1em;
+              font-weight: $light;
+            }
+          }
+
+          .button {
+            margin-top: 3rem;
+
+            @include md {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

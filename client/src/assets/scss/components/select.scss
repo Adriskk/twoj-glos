@@ -1,0 +1,105 @@
+// * Stylesheet for Select component.
+
+.select-wrapper {
+  width: 100%;
+  gap: 0.25rem;
+  $height: 50px;
+
+  &[data-opened="true"] {
+    .face-list {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      min-height: 3 * $height !important;
+      position: relative;
+      z-index: 2 !important;
+
+      .face {
+        position: relative !important;
+      }
+    }
+
+    .icon {
+      transform: rotate(0) !important;
+    }
+
+    .select {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  span.select-label {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-weight: $light;
+    font-size: 0.9em;
+  }
+
+  .select {
+    min-width: 280px;
+    max-width: 600px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    height: $height;
+    //isolation: isolate;
+    transition: 300ms all ease;
+    //z-index: 2;
+
+    .face {
+      width: 100%;
+      min-height: $height;
+      padding: 0.25rem 1rem;
+
+      &:not(.main-face) {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+
+      &.main-face {
+        position: relative;
+        z-index: 2;
+
+        .select-placeholder {
+          color: #fff;
+        }
+
+        .icon {
+          transform: rotate(-90deg);
+          transition: 300ms all ease;
+
+          path {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+
+    .face-list {
+      width: 100%;
+      min-height: $height;
+      overflow-y: auto;
+      transform: translateY(-100%);
+      opacity: 0;
+      transition: 300ms all ease;
+      z-index: -1;
+      background-color: var(--background-color);
+
+      .face {
+        transition: 200ms all ease;
+        position: absolute;
+        background-color: var(--background-color);
+
+        &:not(:nth-child(1)) {
+          border-bottom: solid 1px var(--secondary-color);
+        }
+
+        &:hover {
+          background-color: var(--primary-color-alpha-50);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+// * Font.
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// * AOS.
+@import "aos/dist/aos.css";
+
+// * Base.
+@import "./config.scss";
+@import "./utils.scss";
+
+// * Layouts.
+@import "./layouts/navigation.scss";
+@import "./layouts/footer.scss";
+
+// * Components.
+@import "./components/logo.scss";
+@import "./components/hamburger.scss";
+@import "./components/button.scss";
+@import "./components/select.scss";
+@import "./components/input.scss";
+@import "./components/textarea.scss";
+@import "./components/checkbox.scss";
+@import "./components/search.scss";
+@import "./components/tag.scss";
+@import "./components/loader.scss";
+@import "./components/popup.scss";
+@import "./components/modal.scss";
+@import "./components/search-map-modal.scss";
+@import "./components/radio.scss";
+@import "./components/settings-row.scss";
+@import "./components/empty-results.scss";
+@import "./components/google-map.scss";
+@import "./components/project-item.scss";
+@import "./components/default-header.scss";
+@import "./components/steps-visualizer.scss";
+@import "./components/view-slider.scss";
+
+// * Views.
+@import "./views/landing.scss";
+@import "./views/login.scss";
+@import "./views/register.scss";
+@import "./views/project.scss";
+@import "./views/projects-landing.scss";
+@import "./views/account.scss";
+@import "./views/settings.scss";
+@import "./views/add-project.scss";
+@import "./views/no-match.scss";
+@import "./views/about.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+  font-family: "Inter", sans-serif;
+}
+
+body,
+html {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+
+  &[data-theme="dark"] {
+    --font-color: #fff;
+    --background-color: #323232;
+  }
+
+  @include md {
+    --section-padding: 2rem 3rem;
+  }
+
+  @include md {
+    --section-padding: 3rem 4rem;
+  }
+
+  @include lg {
+    --section-padding: 3rem 5rem;
+  }
+
+  @include xl {
+    --section-padding: 3rem 6rem;
+  }
+}
+
+section {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: var(--section-padding);
+
+  &:last-of-type {
+    padding-bottom: 10rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}

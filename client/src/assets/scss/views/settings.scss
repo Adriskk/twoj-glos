@@ -1,0 +1,138 @@
+// * Stylesheet for Settings view.
+
+section#settings {
+  padding-bottom: 7rem;
+
+  .content {
+    gap: 4rem;
+    width: 100%;
+    margin-top: 4rem;
+
+    .settings-topbar {
+      width: 100%;
+      gap: 1rem;
+
+      .button {
+        min-width: 0 !important;
+        width: auto !important;
+      }
+
+      span.user-name-surname {
+        font-size: 1.4em;
+        font-weight: $regular;
+
+        @include md {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .settings-content {
+      gap: 4rem;
+      width: 100%;
+
+      .settings-user-data {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(auto-fill, 1fr);
+        gap: 2rem;
+        width: 100%;
+
+        @include sm {
+          grid-template-columns: repeat(2, auto);
+          grid-template-rows: repeat(auto-fill, 1fr);
+        }
+
+        .button {
+          border-color: crimson;
+          color: crimson;
+          min-width: 0 !important;
+          width: initial !important;
+          max-width: 200px !important;
+
+          &:hover {
+            color: #fff;
+            background-color: crimson;
+          }
+        }
+      }
+
+      .other-settings-content {
+        gap: 2rem;
+        width: 100%;
+
+        .settings-block {
+          gap: 2rem;
+          width: 100%;
+
+          span.settings-block-header {
+            font-size: 1.4em;
+          }
+        }
+      }
+    }
+  }
+
+  .action-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: var(--section-padding);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    transition: 200ms all ease;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    background-color: var(--background-color);
+
+    @include sm {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .save-changes-btn,
+    .comeback-btn {
+      .button {
+        width: 100%;
+      }
+    }
+
+    .save-changes-btn {
+      opacity: 0;
+      transform: scale(0);
+      transition: 200ms all ease;
+      visibility: hidden;
+
+      &[data-show="true"] {
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .button {
+      max-width: 250px;
+      min-width: 0;
+
+      &:nth-child(1) {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+    }
+
+    .comeback-btn .button {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+      background-color: transparent;
+
+      &:hover {
+        background-color: var(--secondary-color);
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+// * Stylesheet for Account view.
+
+section#account {
+  .content {
+    gap: 5rem;
+    width: 100%;
+    margin-top: 4rem;
+
+    .settings-topbar {
+      width: 100%;
+      gap: 1rem;
+
+      .button {
+        min-width: 0 !important;
+        width: auto !important;
+      }
+
+      span.user-name-surname {
+        font-size: 1.4em;
+        font-weight: $regular;
+
+        @include md {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .action-buttons {
+      gap: 1rem;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    .user-projects-list-wrapper {
+      gap: 2rem;
+      width: 100%;
+
+      .user-projects-header {
+        font-size: 1.2em;
+
+        @include md {
+          font-size: 1.5em;
+        }
+      }
+
+      .projects {
+        gap: 2rem;
+        width: 100%;
+      }
+    }
+  }
+}

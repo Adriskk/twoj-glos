@@ -1,0 +1,46 @@
+// * Stylesheet for Checkbox component.
+
+.checkbox-wrapper {
+  width: 100%;
+  height: auto;
+  gap: 1rem;
+
+  $size: 32px;
+
+  .checkbox {
+    min-width: $size;
+    min-height: $size;
+    border: solid 2px var(--primary-color);
+    border-radius: 5px;
+    position: relative;
+
+    &[data-error="true"] {
+      border-color: crimson;
+    }
+
+    &[data-checked="true"] {
+      border-color: var(--primary-color);
+
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background-color: var(--primary-color);
+      width: $size / 2;
+      height: $size / 2;
+      transition: 200ms all ease;
+    }
+  }
+
+  span.checkbox-label {
+    font-size: 0.9em;
+    font-weight: $light;
+  }
+}

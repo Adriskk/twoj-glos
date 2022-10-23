@@ -1,0 +1,38 @@
+// * Stylesheet for Login view.
+
+section#login {
+  .content {
+    width: 100%;
+    height: auto;
+    gap: 2rem;
+
+    form#login-form {
+      gap: 2rem;
+      width: 100%;
+
+      .form-fields {
+        gap: 1rem;
+        width: 100%;
+
+        .input-wrapper {
+          max-width: 400px !important;
+        }
+      }
+
+      .form-submit-wrapper {
+        width: 100%;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        small {
+          font-weight: $light;
+
+          a {
+            color: var(--primary-color);
+            font-weight: $regular;
+          }
+        }
+      }
+    }
+  }
+}

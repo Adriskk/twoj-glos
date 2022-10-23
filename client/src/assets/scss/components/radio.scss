@@ -1,0 +1,64 @@
+// * Stylesheet for RadioInput component.
+
+.radio-input-wrapper {
+  gap: 0.5rem;
+
+  .radio-input-list-title {
+    font-size: 0.9em;
+    font-weight: $light;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  }
+
+  .radio-input-list {
+    gap: 0.5rem;
+
+    .input-group-wrapper {
+      gap: 0.5rem;
+
+      label.radio-input-label {
+        font-weight: $light;
+        font-size: 0.95em;
+      }
+
+      input[type="radio"] {
+        $size: 16px;
+        width: $size;
+        height: $size;
+
+        appearance: none;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          content: "";
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: solid 2px var(--primary-color);
+        }
+
+        &::after {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          content: "";
+          width: $size - 6px;
+          height: $size - 6px;
+          background-color: var(--primary-color);
+          border-radius: 50%;
+
+          transition: 200ms all ease;
+        }
+
+        &:checked::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+}

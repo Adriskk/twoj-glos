@@ -1,0 +1,67 @@
+// * Utilities stylesheet.
+
+.flex {
+  display: flex;
+}
+
+.f-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.y-center {
+  align-items: center;
+}
+
+.y-start {
+  align-items: flex-start;
+}
+
+.y-end {
+  align-items: flex-end;
+}
+
+.x-center {
+  justify-content: center;
+}
+
+.x-start {
+  justify-content: flex-start;
+}
+
+.x-end {
+  justify-content: flex-end;
+}
+
+.x-between {
+  justify-content: space-between;
+}
+
+.x-around {
+  justify-content: space-around;
+}
+
+.x-evenly {
+  justify-content: space-evenly;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+$sizes: ("16", "24", "32", "48", "64", "96", "128");
+@each $size in $sizes {
+  .size-#{$size}-px {
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+}
+
+$strokes: ("1", "2", "3", "4");
+@each $stroke in $strokes {
+  .text-stroke-#{$stroke} {
+    -webkit-text-stroke: #{$stroke}px var(--font-color);
+    box-shadow: none;
+    color: transparent;
+  }
+}

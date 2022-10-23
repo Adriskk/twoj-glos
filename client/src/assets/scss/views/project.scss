@@ -1,0 +1,124 @@
+// * Stylesheet for Project view.
+
+section#project {
+  .content {
+    gap: 2rem;
+    width: 100%;
+    margin-top: 5rem;
+
+    .project-topbar {
+      gap: 1rem;
+      width: 100%;
+
+      .button {
+        width: auto !important;
+      }
+
+      .author {
+        font-size: 0.9em;
+        font-weight: $light;
+        color: var(--secondary-color);
+      }
+
+      @include md {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .project-title {
+        font-size: 1.4em;
+        gap: 1rem;
+
+        .project-position {
+          color: var(--primary-color);
+        }
+      }
+
+      .project-votes-wrapper {
+        @include md {
+          margin-left: auto;
+        }
+        .project-votes-label {
+          font-size: 1em;
+          font-weight: $light;
+        }
+
+        .project-votes {
+          font-size: 1.2em;
+          font-weight: $medium;
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .project-info {
+      gap: 0.75rem;
+      width: 100%;
+
+      .project-localization,
+      .project-cost {
+        font-size: 0.9em;
+        font-weight: $light;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        @include sm {
+          display: block;
+        }
+
+        span {
+          font-weight: $medium;
+          color: var(--primary-color);
+          width: 100%;
+        }
+      }
+    }
+
+    .project-description {
+      font-size: 0.9em;
+      font-weight: $light;
+      line-height: 1.5em;
+      text-align: justify;
+    }
+
+    .project-additional-information {
+      font-size: 0.9em;
+      font-weight: $light;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      @include sm {
+        display: block;
+      }
+
+      span {
+        font-weight: $medium;
+        color: var(--primary-color);
+        width: 100%;
+      }
+    }
+
+    .project-map-wrapper {
+      width: 100%;
+      height: 400px;
+    }
+
+    .button-wrapper {
+      .button {
+        border-color: crimson;
+        color: crimson;
+
+        &:hover {
+          background-color: crimson;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

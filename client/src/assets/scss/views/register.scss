@@ -1,0 +1,121 @@
+// * Stylesheet for Register view.
+
+section#register {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content {
+    gap: 2rem;
+    margin-top: 5rem;
+
+    @include md {
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    .content-header {
+      gap: 1rem;
+
+      .steps .step {
+        color: var(--primary-color);
+      }
+    }
+
+    form#register-form {
+      gap: 2rem;
+
+      &[data-view="2"] {
+        .form-fields {
+          &.view-2 {
+            display: flex;
+            opacity: 1;
+          }
+
+          &:not(.view-2) {
+            display: none;
+            opacity: 0;
+          }
+        }
+      }
+
+      .form-fields {
+        width: 100%;
+        gap: 1rem;
+
+        @include md {
+          align-items: flex-start;
+        }
+
+        &.view-2 {
+          display: none;
+          opacity: 0;
+        }
+
+        .fields-row {
+          gap: 1rem;
+          width: 100%;
+
+          @include lg {
+            flex-direction: row;
+          }
+        }
+      }
+
+      .form-submit-wrapper {
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        @include md {
+          align-items: flex-start;
+
+          .button {
+            width: 280px;
+          }
+        }
+
+        small {
+          font-weight: $light;
+
+          a {
+            color: var(--primary-color);
+            font-weight: $regular;
+          }
+        }
+      }
+    }
+  }
+
+  .map {
+    display: none;
+
+    @include lg {
+      display: flex;
+    }
+  }
+
+  .checkbox-children {
+    font-weight: $light;
+    font-size: 0.9em;
+
+    a {
+      color: var(--primary-color);
+      font-weight: $regular;
+    }
+  }
+
+  .comeback {
+    font-size: 1em;
+    font-weight: $regular;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
